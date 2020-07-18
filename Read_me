@@ -1,1 +1,28 @@
+The run_analysis.R script performs the data preparation for the given dataset that was provided in the course Data Science - Getting and Cleaning Data Course Project on Coursera
+by Jonh Hopkins University.
 
+Download the dataset
+Dataset downloaded and extracted under the folder called UCI HAR Dataset
+
+Assign each data to variables
+feat 561 rows, 2 columns
+subject_test 2947 rows, 1 column
+x_test 2947 rows, 561 columns
+y_test  2947 rows, 1 columns
+subject_train  7352 rows, 1 column
+x_train 7352 rows, 561 columns
+y_train 7352 rows, 1 columns
+
+Merges the training and the test sets to create one data set
+X (10299 rows, 561 columns) 
+Y (10299 rows, 1 column) 
+Subject (10299 rows, 1 column) 
+Merged_Data (10299 rows, 563 column) 
+
+Extracts only the measurements on the mean and standard deviation for each measurement
+Clean_Data (10299 rows, 88 columns) 
+
+From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+Beutiful_Data (180 rows, 88 columns) 
+
+Export FinalData into FinalData.txt file.
