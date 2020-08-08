@@ -6,7 +6,7 @@ output:
   md_document:
     variant: markdown_github
 ---
-## Introduction
+## Context
 Due to rise in technological advancement devices like Fit bit are now available to the public. These type of devices are part of the “quantified self” movement – a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. But these data remain under-utilized both because the raw data are hard to obtain and there is a lack of statistical methods and software for processing and interpreting the data.
 
 The variables included in this dataset are:
@@ -17,7 +17,7 @@ interval: Identifier for the 5-minute interval in which measurement was taken </
 
 The dataset is stored in a comma-separated-value (CSV) file and there are a total of 17,568 observations in this dataset. 
 
-## Loading and preprocessing the data
+## Data Prepration
 Unzip data to obtain a csv file.
 
 ```{r}
@@ -29,10 +29,11 @@ download.file(fileUrl, destfile = paste0(getwd(), '/repdata%2Fdata%2Factivity.zi
 unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
 ```
 
-## Reading csv Data into Data.Table. 
+## CSV file reading...
 ```{r}
 activityDT <- data.table::fread(input = "data/activity.csv")
 ```
+# Questions:
 
 ## What is mean total number of steps taken per day?
 
@@ -74,7 +75,7 @@ IntervalDT[steps == max(steps), .(max_interval = interval)]
 ```
 
 
-## Imputing missing values
+## Substituting missing values
 
 1. Calculate and report the total number of missing values in the dataset (i.e. the total number of rows with 𝙽𝙰s)
 
