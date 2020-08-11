@@ -1,2 +1,2 @@
 # RStudio
-This repository is linked with Rstudio
+This repository is linked with Rstudio.
